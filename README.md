@@ -69,17 +69,17 @@ What classes will you be creating for this project? Include the instance variabl
 
 Alien
 - Instance variables:
-  - int x_pos, y_pos;
-  - int x_speed;
+  - int xPos, yPos;
+  - int xSpeed;
   - int firerate;
 - METHODS
-  - void maybe_shoot()
+  - void maybeShoot()
   - void move()
-
+  - void gameOverCheck
 Projectile_Player
 - Instance variables:
-  - int x_pos, y_pos;
-  - int x_speed;
+  - int xPos, yPos;
+  - int ySpeed;
 - METHODS
   - void move()
-  - void hit_check()
+  - void hitCheck()
