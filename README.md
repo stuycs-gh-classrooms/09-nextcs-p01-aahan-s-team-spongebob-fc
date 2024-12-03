@@ -75,6 +75,7 @@ Alien
 - METHODS
   - void maybe_shoot()
   - void move()
+
 Projectile_Player
 - Instance variables:
   - int x_pos, y_pos;
