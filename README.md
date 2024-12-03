@@ -76,6 +76,7 @@ Alien
   - void maybeShoot()
   - void move()
   - void gameOverCheck
+
 Projectile_Player
 - Instance variables:
   - int xPos, yPos;
