@@ -1,7 +1,7 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/PX83n--N)
 # NeXtCS Project 01
 ### Name0: SPONGEBOB FC
-### Name1: Jason Cheng
+### Name1: Jason Zheng
 ---
 
 ### Overview
@@ -17,50 +17,70 @@ This project will be completed in phases. The first phase will be to work on thi
 
 ## Phase 0: Selection, Analysis & Plan
 
-#### Selected Project: CHOOSE WISELY
+#### Selected Project: Space Invaders
 
 ### Necessary Features
 What are the core features that your program should have? These should be things that __must__ be implemented in order to make the program useable/playable, not extra features that could be added to make the program more interesting/fun.
 
-YOUR ANSWERS HERE
+Space Invaders
+
+There would be four different objects: The player ship, Enemy Aliens, Barricades, and Projectiles.
+
+- The player ship may move side to side, and fire projectiles at enemy aliens.
+- Enemy Aliens move along a pre-determined path and fire projectiles at the player.
+- Projectiles may only move up(player-fired) and down(alien fired), perfectly vertical. 
+- Barridcades delete any projectile that comes into contact with them.
+
+The main goal of the player is to eliminate all enemy aliens using fired projectiles.
 
 ### Extra Features
 What are some features that are not essential to the program, but you would like to see (provided you have time after completing the necessary features. Theses can be customizations that are not part of the core requirements.
 
-YOUR ANSWERS HERE
+- Destructible Barricades
+- Different Player Ship types + initial selection screen
+- Health
+- Different Alien types
 
 ### Array Usage
 How will you be using arrays in this project?
 
 1D Array:
-- YOUR ANSER HERE
+- N/A at the moment
 
 2D Array:
-- YOUR ANSWER HERE
+- Alien generation and behavior
 
 
 ### Controls
 How will your program be controlled? List all keyboard commands and mouse interactions.
 
 Keyboard Commands:
-- LIST OF COMMANDS HERE
+- A or LEFT ARROW: move ship left
+- D or RIGHT ARROW: move ship right
+- SPACE: fire projectile
 
 Mouse Control:
-- Mouse movement:
-- Mouse pressed:
+- Mouse movement: N/A at the moment
+- Mouse pressed: N/A at the moment
 
 
 ### Classes
 What classes will you be creating for this project? Include the instance variables and methods that you believe you will need. You will be required to create at least 2 different classes. If you are going to use classes similar to those we've made for previous assignments, you will have to add new features to them.
 
-CLASS NAME0
+Alien
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - int xPos, yPos;
+  - int xSpeed;
+  - int firerate;
 - METHODS
-  - LIST METHODS HERE
+  - void maybeShoot()
+  - void move()
+  - void gameOverCheck
 
-CLASS NAME1
+Projectile_Player
 - Instance variables:
-  - LIST INSTANCE VARS HERE
+  - int xPos, yPos;
+  - int ySpeed;
 - METHODS
-  - LIST METHODS HERE
+  - void move()
+  - void hitCheck()
