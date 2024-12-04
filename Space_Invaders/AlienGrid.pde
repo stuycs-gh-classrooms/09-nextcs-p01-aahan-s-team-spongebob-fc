@@ -40,7 +40,7 @@ class AlienGrid {
     }//rows
   }//drawGrid
 
-  boolean processCollisions(Alien p) {
+  boolean processCollisions(Projectile p) {
     boolean hit = false;
     for (int r=0; r<grid.length; r++) {
       for (int c=0; c<grid[r].length; c++) {
@@ -124,4 +124,14 @@ class AlienGrid {
       }//columns
     }//rows
   }//changeDirection
+  
+  void changeColor(color colour) {
+    for (int r=0; r<grid.length; r++) {
+      for (int c=0; c<grid[r].length; c++){
+        if(grid[r][c] != null) {
+          grid[r][c].setColor(colour);
+        }
+      }//columns
+    }//rows
+  }
 }//AlienGrid

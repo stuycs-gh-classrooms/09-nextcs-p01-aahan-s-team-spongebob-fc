@@ -1,4 +1,4 @@
-class Alien {
+class Projectile {
 
   //instance variables
   PVector center;
@@ -8,10 +8,15 @@ class Alien {
   color c;
 
    //default constructor
-   Alien(PVector p, int s) {
+   Projectile(PVector p, int s) {
      bsize = s;
      center = new PVector(p.x, p.y);
    }
+
+  boolean collisionCheck(Alien other) {
+    return ( this.center.dist(other.center)
+             <= (this.bsize/2 + other.bsize/2) );
+  }//collisionCheck
 
   void setColor(color newC) {
     c = newC;
@@ -20,7 +25,7 @@ class Alien {
   //visual behavior
   void display() {
     fill(c);
-    circle(center.x, center.y, bsize);
+    rect(center.x + bsize/2, center.y + bsize/2, bsize/4, bsize);
   }//display
 
   void setSpeed(int newx, int newy) {
@@ -42,4 +47,4 @@ class Alien {
      center.y+= yspeed;
   }//move
 
-}//Alien
+}//Projectile
