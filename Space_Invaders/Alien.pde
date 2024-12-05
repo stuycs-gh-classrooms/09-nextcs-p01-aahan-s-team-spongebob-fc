@@ -2,8 +2,7 @@ class Alien {
 
   //instance variables
   PVector center;
-  int xspeed;
-  int yspeed;
+  int xspeed, yspeed;
   int bsize;
   color c;
 

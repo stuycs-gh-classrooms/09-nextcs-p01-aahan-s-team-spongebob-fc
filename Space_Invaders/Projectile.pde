@@ -14,8 +14,7 @@ class Projectile {
    }
 
   boolean collisionCheck(Alien other) {
-    return ( this.center.dist(other.center)
-             <= (this.bsize/2 + other.bsize/2) );
+    return (this.center.dist(other.center) <= (this.bsize/2 + other.bsize/2));
   }//collisionCheck
 
   void setColor(color newC) {

@@ -1,13 +1,27 @@
 //Space Invaders
 
-int score, lives;
-int NUM_ROWS = 3;
+int score, lives; //game values
+
+//governs number of aliens spawned, in a grid
+int NUM_ROWS = 3; 
 int NUM_COLS = 5;
+
+//governs aliens statistics
 int AlienSize = 40;
+color alienColor = color(150,0,255);
+
+//governs player projectile stats
 int projectileSize = 20;
 int projectileSpeed = 10;
-color alienColor = color(150,0,255);
 color projectileColor = color(255);
+
+//shipType variables(DO NOT EDIT)
+int SHIP_HEAVY = 1;
+int SHIP_LIGHT = 2;
+int SHIP_DREADNOUGHT = 3;
+int SHIP_FREESHOOTER = 4;
+
+//classes
 AlienGrid Aliens;
 Projectile projectile;
 
