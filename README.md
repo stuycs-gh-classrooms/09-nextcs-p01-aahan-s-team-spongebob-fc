@@ -48,7 +48,7 @@ How will you be using arrays in this project?
 - N/A at the moment
 
 2D Array:
-- Alien generation and behavior
+- Alien generation(in a grid)
 
 
 ### Controls
