@@ -10,15 +10,14 @@ class Player {
   
   void display() {
     if(shipType == SHIP_HEAVY) {
+    }
+    if(shipType == SHIP_LIGHT) {
       
     }
-    if(shipType == SHIP_HEAVY) {
+    if(shipType == SHIP_DREADNOUGHT) {
       
     }
-    if(shipType == SHIP_HEAVY) {
-      
-    }
-    if(shipType == SHIP_HEAVY) {
+    if(shipType == SHIP_LANCER) {
       
     }
   }
