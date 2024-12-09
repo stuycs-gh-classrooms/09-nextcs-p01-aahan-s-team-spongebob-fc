@@ -63,7 +63,7 @@ void keyPressed() {
     projectile.yspeed = -projectileSpeed;
   }
   if (keyCode == LEFT && projectile.center.y == height - projectile.bsize) {
-    projectile.center.x-=projectile.bsize;
+    PlayerShip.center.x += PlayerShip.shipSize;
   }
   if (keyCode == RIGHT && projectile.center.y == height - projectile.bsize) {
     projectile.center.x+=projectile.bsize;
