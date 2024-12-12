@@ -31,7 +31,7 @@ Projectile projectile;
 Player PlayerShip;
 
 void setup() {
-  size(1000, 500);
+  size(700, 500);
   newprojectile(projectileSize);
   PVector startingPlayerPosition = new PVector(shipStartingX, shipStartingY);
   Aliens = new AlienGrid(NUM_ROWS, NUM_COLS, AlienSize);
@@ -45,13 +45,12 @@ void draw() {
   projectile.setColor(projectileColor);
   projectile.display();
   projectile.move();
-  
-  
+  PlayerShip.display();
   boolean hit = Aliens.processCollisions(projectile);
   if (hit) {
     newprojectile(projectileSize);
   }
-  if (frameCount % 120 == 0) {
+  if (frameCount % 60 == 0) {
     Aliens.move();
   }
   //saveFrame("data/" + nf(frameCount, 4) + ".png");

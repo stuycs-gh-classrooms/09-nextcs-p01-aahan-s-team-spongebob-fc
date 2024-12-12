@@ -19,6 +19,7 @@ class Alien {
   //visual behavior
   void display() {
     fill(c);
+    stroke(c);
     circle(center.x, center.y, bsize);
   }//display
 
@@ -29,16 +30,8 @@ class Alien {
 
   //movement behavior
   void move() {
-    if (center.x > width - bsize/2 ||
-        center.x < bsize/2) {
-        xspeed*= -1;
-     }
-     if (center.y > height - bsize/2 ||
-         center.y < bsize/2) {
-         yspeed*= -1;
-      }
-     center.x+= xspeed;
-     center.y+= yspeed;
+   center.x+= xspeed;
+   center.y+= yspeed;
   }//move
 
 }//Alien

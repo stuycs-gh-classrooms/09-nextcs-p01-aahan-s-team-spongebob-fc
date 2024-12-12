@@ -11,7 +11,7 @@ class Player {
   
   void display() {
     if(shipType == SHIP_HEAVY) {
-      shipSize = width/5;
+      shipSize = width/50;
     }
     if(shipType == SHIP_LIGHT) {
       
@@ -22,6 +22,9 @@ class Player {
     if(shipType == SHIP_LANCER) {
       
     }
+    stroke(0,255,255);
+    fill(0,255,255);
+    triangle(center.x, center.y - shipSize, center.x - shipSize * 3/4, center.y + shipSize, center.x + shipSize * 3/4, center.y + shipSize);
   }
   
   void move(int direction) {

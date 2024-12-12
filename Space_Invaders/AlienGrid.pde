@@ -10,8 +10,8 @@ class AlienGrid {
   AlienGrid(int rows, int cols, int bsize) {
     grid = new Alien[rows][cols];
     AlienSize = bsize;
-    gridWidth = AlienSize * cols;
-    gridHeight = AlienSize * rows;
+    gridWidth = AlienSize * cols + ((AlienSize - 1)/2);
+    gridHeight = AlienSize * rows + ((AlienSize - 1)/2);
     direction = RIGHT;
     topLeft = new PVector(AlienSize/2, AlienSize/2);
     makeAliens();
@@ -23,9 +23,9 @@ class AlienGrid {
       for (int c=0; c<grid[r].length; c++) {
         grid[r][c] = new Alien(pos, AlienSize);
         grid[r][c].setSpeed(AlienSize, 0);
-        pos.x+=AlienSize;
+        pos.x+=AlienSize * 3/2;
       }//columns
-      pos.y+= AlienSize;
+      pos.y+= AlienSize * 3/2;
       pos.x = topLeft.x;
     }//rows
   }//makeAliens
@@ -54,7 +54,6 @@ class AlienGrid {
   }//processCollisions
 
   void move() {
-
     if (direction == DOWN) {
       topLeft.y+= AlienSize;
     }
